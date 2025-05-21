@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const MyComponentFunc = ({ name, children }) => {
     //상태변수와 setter 함수 선언하기
@@ -8,15 +8,21 @@ const MyComponentFunc = ({ name, children }) => {
     const [inputs, setInputs] = useState({
         message: '', username: ''
     });
+    const [valid, setValid] = useState(false);
 
     const handleChange = (e) => {
         setInputs({
             ...inputs,
             [e.target.name]: e.target.value
         });
+    }; //handleChange
+
+    const handleEnter = (e) => {
+
     };
 
     const { message, username } = inputs;
+    const myUsername = useRef(null);
 
     return (
         <div>
@@ -27,9 +33,14 @@ const MyComponentFunc = ({ name, children }) => {
             <button onClick={() => (setValue(value + 1))}>증가</button>
             <button onClick={() => (setValue(value - 1))}>감소</button>
             <p>State message의 값 = {message}</p>
-            <input name="message" value={message} onChange={handleChange} /><br />
+            <input name="message" value={message} onChange={handleChange} 
+                onKeyDown={handleEnter}
+            /><br />
             <p>State username의 값 = {username}</p>
-            <input name="username" value={username} onChange={handleChange} /><br />
+            <input name="username" value={username} onChange={handleChange} 
+                className={ valid ? 'success':'failure'}
+                ref={myUsername}
+            /><br />
 
         </div>
     );
