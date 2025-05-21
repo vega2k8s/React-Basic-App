@@ -6,7 +6,11 @@ export default class MyComponent extends Component {
     state = {
         value: 0,
     }
-    //Event Handler 함수
+    //Event Handler 함수 - bind(this)를 생성자에서 해주어야 this 사용가능함
+    // handleDecrement() {
+    //     this.setState({value: this.state.value - 1});
+    // }
+
     handleDecrement = () => (
         this.setState({
             value: this.state.value - 1
