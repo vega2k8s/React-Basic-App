@@ -10,7 +10,9 @@ const MyComponentFunc = ({ name, children }) => {
     });
 
     const handleChange = (e) => {
-
+        setInputs({
+            [e.target.name]: e.target.value
+        });
     };
 
     const { message, username } = inputs;
