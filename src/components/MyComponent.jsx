@@ -48,6 +48,7 @@ export default class MyComponent extends Component {
                 <p>State username의 값 = {username}</p>
                 <input name="username" value={username} onChange={handleChange}
                     className={ isValid ? 'success':'failure'}
+                    ref={(ref) => this.myUsername=ref}
                  /><br/>
 
             </div>
