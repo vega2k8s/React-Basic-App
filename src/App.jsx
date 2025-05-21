@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <MyComponent name="ReactJS" />
-      <MyComponent name={100} />
+      <MyComponent age={100} />
     </>
   )
 }
