@@ -1,9 +1,7 @@
-import React from 'react';
-
 const MyComponentFunc = () => {
     return (
         <div>
-            
+            <h2>함수형 컴포넌트</h2>
         </div>
     );
 };
