@@ -19,8 +19,10 @@ export default class MyComponent extends Component {
         })
     );
 
-    handleChange = () => {
-
+    handleChange = (e) => {
+        this.setState({
+            message: e.target.value
+        });
     }; //handleChange
 
     render() {
