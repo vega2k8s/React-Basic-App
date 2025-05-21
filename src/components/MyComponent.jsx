@@ -29,9 +29,12 @@ export default class MyComponent extends Component {
     }; //handleChange
 
     handleEnter = (e) => {
+        const { message, messageArr } = this.state;
+
         if(e.keyCode === 13){
             this.setState({
                 isValid: true,
+                messageArr: [...messageArr, message],
                 message: ''                
             });
             this.myUsername.focus();
@@ -44,7 +47,7 @@ export default class MyComponent extends Component {
         const { name, age } = this.props;
         const { value, message, username, isValid, messageArr } = this.state;
         const { handleDecrement, handleChange, handleEnter } = this;
-        const messageList = messageArr.map((msg) => (<li>{msg}</li>));
+        const messageList = messageArr.map((msg,idx) => (<li key={idx}>{msg}</li>));
 
         return (
             <div>

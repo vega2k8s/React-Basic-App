@@ -10,6 +10,8 @@ const MyComponentFunc = ({ name, children }) => {
         message: '', username: ''
     });
     const [valid, setValid] = useState(false);
+    const [messageArr, setMessageArr] = useState(['Angular','React','Vue','Ember']);
+
 
     const handleChange = (e) => {
         setInputs({
