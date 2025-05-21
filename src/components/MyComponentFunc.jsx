@@ -18,7 +18,14 @@ const MyComponentFunc = ({ name, children }) => {
     }; //handleChange
 
     const handleEnter = (e) => {
-
+        if(e.keyCode === 13) {
+            setValid(true);
+            setInputs({
+                ...inputs,
+                message:''
+            })
+        }
+        myUsername.current.focus();
     };
 
     const { message, username } = inputs;
