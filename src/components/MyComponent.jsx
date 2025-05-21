@@ -27,12 +27,16 @@ export default class MyComponent extends Component {
         });
     }; //handleChange
 
+    handleEnter = (e) => {
+
+    }; //handleEnter
+
 
     render() {
         //destructuring assignment
         const { name, age } = this.props;
         const { value, message, username, isValid } = this.state;
-        const { handleDecrement, handleChange } = this;
+        const { handleDecrement, handleChange, handleEnter } = this;
 
         return (
             <div>
@@ -44,7 +48,9 @@ export default class MyComponent extends Component {
                 )}>증가</button>
                 <button onClick={handleDecrement}>감소</button> <br/>
                 <p>State message의 값 = {message}</p>
-                <input name="message" value={message} onChange={handleChange} /><br/>
+                <input name="message" value={message} onChange={handleChange} 
+                    onKeyDown={handleEnter}
+                /><br/>
                 <p>State username의 값 = {username}</p>
                 <input name="username" value={username} onChange={handleChange}
                     className={ isValid ? 'success':'failure'}
