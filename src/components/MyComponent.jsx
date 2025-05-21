@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Component, isValidElement } from 'react';
 import PropTypes from 'prop-types';
 import './MyComponent.css';
 
@@ -28,7 +28,13 @@ export default class MyComponent extends Component {
     }; //handleChange
 
     handleEnter = (e) => {
-
+        if(e.keyCode === 13){
+            this.setState({
+                isValid: true,
+                message: ''                
+            });
+            this.myUsername.focus();
+        }//if
     }; //handleEnter
 
 
