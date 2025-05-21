@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import './MyComponent.css';
 
 const MyComponentFunc = ({ name, children }) => {
     //상태변수와 setter 함수 선언하기
