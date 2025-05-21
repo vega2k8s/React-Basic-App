@@ -23,6 +23,7 @@ const MyComponentFunc = ({ name, children }) => {
     const handleEnter = (e) => {
         if(e.keyCode === 13) {
             setValid(true);
+            setMessageArr([...messageArr, message]);
             setInputs({
                 ...inputs,
                 message:''
