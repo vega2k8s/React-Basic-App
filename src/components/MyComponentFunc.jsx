@@ -25,8 +25,8 @@ const MyComponentFunc = ({ name, children }) => {
                 ...inputs,
                 message:''
             })
-        }
-        myUsername.current.focus();
+            myUsername.current.focus();
+        }//if
     };
 
     const { message, username } = inputs;
