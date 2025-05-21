@@ -42,10 +42,10 @@ export default class MyComponent extends Component {
     render() {
         //destructuring assignment
         const { name, age } = this.props;
-        const { value, message, username, isValid } = this.state;
+        const { value, message, username, isValid, messageArr } = this.state;
         const { handleDecrement, handleChange, handleEnter } = this;
-        const messageList = messageArr.map();
-        
+        const messageList = messageArr.map((msg) => (<li>{msg}</li>));
+
         return (
             <div>
                 <h2>클래스형 컴포넌트</h2>
@@ -59,6 +59,9 @@ export default class MyComponent extends Component {
                 <input name="message" value={message} onChange={handleChange} 
                     onKeyDown={handleEnter}
                 /><br/>
+                <ul>
+                    {messageList}
+                </ul>
                 <p>State username의 값 = {username}</p>
                 <input name="username" value={username} onChange={handleChange}
                     className={ isValid ? 'success':'failure'}
