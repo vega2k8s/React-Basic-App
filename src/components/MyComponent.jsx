@@ -1,4 +1,5 @@
-import { Component } from 'react'
+import { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class MyComponent extends Component {
   render() {
@@ -11,4 +12,7 @@ export default class MyComponent extends Component {
 } //class
 MyComponent.defaultProps = {
     name: '리액트JS'
+};
+MyComponent.propTypes = {
+    name: PropTypes.string
 };

@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <MyComponent name="ReactJS" />
-      <MyComponent />
+      <MyComponent name={100} />
     </>
   )
 }
