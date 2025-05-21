@@ -3,7 +3,12 @@ import { Component } from 'react'
 export default class MyComponent extends Component {
   render() {
     return (
-      <div>MyComponent</div>
+      <div>
+        <h3>Hello! {this.props.name}</h3>
+      </div>
     )
   }
-}
+} //class
+MyComponent.defaultProps = {
+    name: '리액트JS'
+};
