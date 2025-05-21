@@ -21,9 +21,10 @@ export default class MyComponent extends Component {
 
     handleChange = (e) => {
         this.setState({
-            message: e.target.value
+            [e.target.name]: e.target.value
         });
     }; //handleChange
+
 
     render() {
         //destructuring assignment
