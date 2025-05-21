@@ -6,6 +6,12 @@ export default class MyComponent extends Component {
     state = {
         value: 0,
     }
+    //Event Handler 함수
+    handleDecrement = () => (
+        this.setState({
+            value: this.state.value - 1
+        })
+    );
 
     render() {
         //destructuring assignment
