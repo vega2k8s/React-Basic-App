@@ -41,7 +41,10 @@ export default class MyComponent extends Component {
                 )}>증가</button>
                 <button onClick={handleDecrement}>감소</button> <br/>
                 <p>State message의 값 = {message}</p>
-                <input name="message" value={message} onChange={handleChange} />
+                <input name="message" value={message} onChange={handleChange} /><br/>
+                <p>State username의 값 = {username}</p>
+                <input name="username" value={username} onChange={handleChange} /><br/>
+
             </div>
         )
     }
