@@ -8,7 +8,8 @@ export default class MyComponent extends Component {
         value: 0,
         message: '',
         username: '',
-        isValid: false
+        isValid: false,
+        messageArr: ['Angular','React','Vue','Ember']
     }
     //Event Handler 함수 - bind(this)를 생성자에서 해주어야 this 사용가능함
     // handleDecrement() {
@@ -43,7 +44,8 @@ export default class MyComponent extends Component {
         const { name, age } = this.props;
         const { value, message, username, isValid } = this.state;
         const { handleDecrement, handleChange, handleEnter } = this;
-
+        const messageList = messageArr.map();
+        
         return (
             <div>
                 <h2>클래스형 컴포넌트</h2>
